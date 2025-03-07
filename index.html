@@ -13,20 +13,24 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            margin: 0;
             position: relative;
         }
         .carta {
-            width: 60%;
+            width: 90%;
+            max-width: 800px;
             background: #DBDED5;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             position: relative;
         }
         .texto {
-            width: 50%;
+            width: 100%;
+            padding: 10px;
         }
         .texto h1 {
             text-align: center;
@@ -42,11 +46,13 @@
             resize: none;
         }
         .imagem {
-            width: 40%;
+            width: 100%;
             text-align: center;
+            margin-top: 20px;
         }
         .imagem img {
             width: 100%;
+            max-width: 300px;
             border-radius: 10px;
         }
         .eu-te-amo {
@@ -59,6 +65,35 @@
             position: absolute;
             color: red;
             font-size: 24px;
+        }
+
+        /* Responsividade */
+        @media (min-width: 600px) {
+            .carta {
+                width: 80%;
+                flex-direction: row;
+            }
+            .texto {
+                width: 50%;
+            }
+            .imagem {
+                width: 40%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .carta {
+                width: 70%;
+            }
+            .texto h1 {
+                font-size: 2em;
+            }
+            .mensagem {
+                font-size: 18px;
+            }
+            .eu-te-amo {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
