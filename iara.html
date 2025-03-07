@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Meu Amor</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+        .carta {
+            width: 60%;
+            background: #DBDED5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .texto {
+            width: 50%;
+        }
+        .texto h1 {
+            text-align: center;
+        }
+        .mensagem {
+            width: 100%;
+            height: 200px;
+            font-size: 16px;
+            padding: 10px;
+            background: none;
+            border: none;
+            outline: none;
+            resize: none;
+        }
+        .imagem {
+            width: 40%;
+            text-align: center;
+        }
+        .imagem img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .eu-te-amo {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+        .coracao {
+            position: absolute;
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carta">
+        <div class="texto">
+            <h1>Para Meu Amor</h1>
+            <p class="mensagem">Meu bem, nesse dia das mulheres gostaria de agradecer a todo o apoio que tive ao seu lado, você que eu já conheço há tantos anos mas que há 5 meses (um pouco mais na verdade) esteve mais presente ainda na minha vida, não tenho palavras para expressar o quão grande é o meu amor por você e o quão grato eu sou a Deus pela resposta de oração pois te conhecer e continuar a aprender mais sobre ti tem sido uma aventura imensa.<br>Quero poder experimentar novas alegrias e desafios ao seu lado, eu te amo demais e quero sempre deixar isso mais que claro...Duvide da minha inteligência, do meu Humor mas nunca duvide do meu amor por ti.<br>Te conhecer foi o destino, me tornar seu amigo foi uma escolha...Mas me apaixonar por você dessa forma nunca esteve no meu controle</p>
+        </div>
+        <div class="imagem">
+            <img src="https://i.postimg.cc/sxxNV9rK/amor.jpg" alt="Nossa Foto"> 
+        </div>
+    </div>
+    <div class="eu-te-amo">Eu te amo!!!</div>
+
+    <!-- Corações espalhados -->
+    <script>
+        for (let i = 0; i < 10; i++) {
+            let coracao = document.createElement("div");
+            coracao.classList.add("coracao");
+            coracao.innerHTML = "❤️";
+            coracao.style.top = Math.random() * 90 + "%";
+            coracao.style.left = Math.random() * 90 + "%";
+            document.body.appendChild(coracao);
+        }
+    </script>
+</body>
+</html>
