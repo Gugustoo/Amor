@@ -24,26 +24,30 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             position: relative;
         }
         .texto {
             width: 100%;
             padding: 10px;
+            text-align: center;
         }
         .texto h1 {
-            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
         .mensagem {
             width: 100%;
-            height: 200px;
-            font-size: 16px;
+            height: auto;
+            font-size: 14px;
             padding: 10px;
             background: none;
             border: none;
             outline: none;
             resize: none;
+            margin-top: 10px;
         }
         .imagem {
             width: 100%;
@@ -52,7 +56,7 @@
         }
         .imagem img {
             width: 100%;
-            max-width: 300px;
+            max-width: 250px;
             border-radius: 10px;
         }
         .eu-te-amo {
@@ -60,6 +64,7 @@
             font-size: 24px;
             font-weight: bold;
             color: red;
+            text-align: center;
         }
         .coracao {
             position: absolute;
@@ -67,8 +72,30 @@
             font-size: 24px;
         }
 
-        /* Responsividade */
-        @media (min-width: 600px) {
+        /* Responsividade para telas pequenas */
+        @media (max-width: 600px) {
+            .carta {
+                width: 90%;
+                padding: 15px;
+            }
+            .texto h1 {
+                font-size: 1.3em;
+            }
+            .mensagem {
+                font-size: 13px;
+                height: auto;
+                padding: 8px;
+            }
+            .imagem img {
+                max-width: 80%;
+            }
+            .eu-te-amo {
+                font-size: 20px;
+            }
+        }
+
+        /* Responsividade para telas médias */
+        @media (min-width: 601px) and (max-width: 1024px) {
             .carta {
                 width: 80%;
                 flex-direction: row;
@@ -79,9 +106,19 @@
             .imagem {
                 width: 40%;
             }
+            .texto h1 {
+                font-size: 1.6em;
+            }
+            .mensagem {
+                font-size: 15px;
+            }
+            .eu-te-amo {
+                font-size: 24px;
+            }
         }
 
-        @media (min-width: 1024px) {
+        /* Responsividade para telas grandes */
+        @media (min-width: 1025px) {
             .carta {
                 width: 70%;
             }
